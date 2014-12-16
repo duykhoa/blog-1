@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141214073712) do
+ActiveRecord::Schema.define(version: 20141216003654) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,10 +19,14 @@ ActiveRecord::Schema.define(version: 20141214073712) do
   create_table "articles", force: true do |t|
     t.string   "title"
     t.text     "body"
-    t.boolean  "published",    default: false, null: false
+    t.boolean  "published",              default: false, null: false
     t.datetime "published_at"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "thumbnail_file_name"
+    t.string   "thumbnail_content_type"
+    t.integer  "thumbnail_file_size"
+    t.datetime "thumbnail_updated_at"
   end
 
   create_table "categories", force: true do |t|
