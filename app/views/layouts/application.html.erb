@@ -7,11 +7,52 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div class="body">
+    <header>
+      <%= link_to(root_path) do %>
+        <h1 class="blog_title">THE THINGS</h1>
+      <% end %>
+    </header>
 
-<%= yield %>
+    <% if notice %>
+      <p class="alert alert-notice"><%= notice %></p>
+    <% end %>
+    <% if alert %>
+      <p class="alert alert-error"><%= alert %></p>
+    <% end %>
 
-   <p class="notice"><%= notice %></p>
-   <p class="alert"><%= alert %></p>
+    <div class="main">
+      <%= yield %>
+      <footer>
+        <p class="byme">Designed and developed by Sara</p>
+<!--         <a href="https://www.viglink.com/legal/disclosures/users?vgtag=badge"><img alt="VigLink badge" height="31" src="//www.viglink.com/images/badges/88x31.png" title="Links monetized by VigLink" width="88" /></a> -->
+
+        <p class="admin">
+        <% if user_signed_in? %>
+          <%= link_to "Logout", destroy_user_session_path %>
+        <% end %>
+        </p>
+      </footer>
+    </div>
+    <div class="sidebar">
+      <a href="" class="about_link">
+        <img src="<%#= asset_path 'profilepic.jpeg' %>" class="sidebar_image" nopin="nopin">
+        <span class="about">about<br>me!</span>
+        <img src="<%= asset_path 'arrowforblog.png' %>" class="sidebar_arrow">
+      </a>
+      <ul class="social_links">
+        <li>
+          <a href="" target="_blank"><span>GITHUB</span></a>
+        </li>
+        <li>
+          <a href="" target="_blank"><span>LINKEDIN</span></a>
+        </li>
+        <li>
+          <a href="" target="_blank"><span>TWITTER</span></a>
+        </li>    
+      </ul>
+    </div>
+  </div>
 
 </body>
 </html>
