@@ -42,12 +42,17 @@ class ArticlesController < ApplicationController
 
   def index
     page_num = params[:page]
+    @articles = Article.paginate(:page => params[:page])
     @article = Article.where(published: true).order(published_at: :desc).page(page_num)
 
     if page_num.to_i > 1
       @older_articles = @articles
     else
       @newest_article, *@older_articles = @article
+    end
+
+    if user_signed_in?
+      @unpublished_articles = Article.where(published: false)
     end
   end
 
