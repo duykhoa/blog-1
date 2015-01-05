@@ -26,11 +26,15 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
 
+# For admin
 gem 'devise'
 
+# For photos
 gem 'rmagick', '2.13.2'
 gem "paperclip", "~> 4.2"
+gem 'aws-sdk-v1'
 
+# Page numbers
 gem 'will_paginate', '~> 3.0.6'
 
 # Use ActiveModel has_secure_password
