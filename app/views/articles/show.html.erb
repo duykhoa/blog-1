@@ -6,3 +6,10 @@
 	</div>
 <% end %>
 
+<div class="comments">
+  <h2>Comments</h2>
+  <%= render @article.comments %>
+  <h2>Write a Comment</h2>
+  <%= render 'comments/form' %>
+</div>
+
