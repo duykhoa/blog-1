@@ -1,3 +1,24 @@
 // Place all the styles related to the Pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.about_div {
+	border-top: 2px solid rgb(38,38,38);
+	margin: 0 10px;
+}
+
+.about_div h1 {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 300;
+	margin-bottom: 3px;
+	margin-top: 20px;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 1.75em;
+}
+
+.about_div p {
+	font-family: verdana, sans-serif;
+	font-size: 1em;
+	line-height: 1.5em;
+}
