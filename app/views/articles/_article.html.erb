@@ -6,5 +6,8 @@
       <% end %>
     <p><%= link_to_unless_current image_tag(article.thumbnail.url, :alt => article.title), article %></p>
     <p><%= article.body.gsub(/\n/, '<br/>').html_safe %></p>
+    <strong><%= link_to '< Back to main page', articles_path %></strong>
+    <br/>
+    <br/>
   </div>
 </div>
