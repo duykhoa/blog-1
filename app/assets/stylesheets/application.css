@@ -12,6 +12,7 @@
  *
  *= require_tree .
  *= require_self
+ *= require magnific-popup.css
  */
 
 @import url(http://fonts.googleapis.com/css?family=Sanchez|League+Script|Raleway:300);
