@@ -60,6 +60,7 @@ ActiveRecord::Schema.define(version: 20150114171005) do
     t.string   "thumbnail_content_type"
     t.integer  "thumbnail_file_size"
     t.datetime "thumbnail_updated_at"
+    t.integer  "category_id"
   end
 
   create_table "categories", force: true do |t|
