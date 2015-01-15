@@ -10,6 +10,17 @@
 </head>
 
 <body>
+    <%- if flash[:error] %>
+      <div class="notice">
+        <ul>
+          <%- flash[:error].each do |message| %>
+            <li>
+              <%= message.join ' ' %>
+            </li>
+          <%end%>
+        </ul>
+      </div>
+    <%end%>
   <div class="body">
     <header>
       <%= link_to(root_path) do %>
