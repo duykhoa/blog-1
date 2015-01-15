@@ -17,7 +17,7 @@
 @import url(http://fonts.googleapis.com/css?family=Sanchez|League+Script|Raleway:300);
 
 body {
-	background-color: white;	
+	background-color: white;
 }
 
 .body {
@@ -180,4 +180,29 @@ footer {
 	color: rgb(100,100,100);
 	font-size: 0.75em;
 	text-transform: uppercase;
+}
+
+.contact-me-link {
+  position: fixed;
+  bottom: 100px;
+  right: -30px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.contact-me-wrapper {
+  transform: rotate(-90deg);
+  padding: 10px 15px;
+  border: 1px solid black;
+  background: rgba(0, 0, 0, 0);
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+}
+
+.contact-me-wrapper:hover {
+  border: 1px solid transparent;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.contact-me-wrapper a {
+  color: black;
 }
