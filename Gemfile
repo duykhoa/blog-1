@@ -28,7 +28,7 @@ gem 'spring',        group: :development
 
 # For admin
 gem 'devise'
-
+gem 'activeadmin', github: 'activeadmin'
 # For photos
 gem 'rmagick', '2.13.2'
 gem "paperclip", "~> 4.2"
