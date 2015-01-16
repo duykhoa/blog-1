@@ -72,19 +72,19 @@ class ArticlesController < ApplicationController
   end
 
   def tag
-    @articles = Article.tagged_with(tag_param).latest.paginate(page: page_param[:page])
+    @articles = Article.tagged_with(tag_param).latest.paginate(page: page_param)
 
-    render 'index'
+    render 'tag'
   end
 
   private
 
   def page_param
-    params.permit(:page)
+    params.permit(:page).fetch(:page) rescue 1
   end
 
   def tag_param
-    params.permit(:tag_name)
+    params.permit(:tag_name).fetch(:tag_name)
   end
 
   def article_params
