@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
-
   devise_for :users
 
   resources :articles do
-    resources :comments
+    resources :comments, only: [:create] do
+      resource :replies, only: [:create]
+    end
   end
 
   resources :contact_mes, only: [:create]
