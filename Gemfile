@@ -38,7 +38,18 @@ gem 'aws-sdk-v1'
 gem 'will_paginate', '~> 3.0.6'
 
 gem 'rails_12factor', group: :production
-gem 'simple_form'
+
+gem 'simple_form', github: 'plataformatec/simple_form'
+#summernote
+gem 'bootstrap-sass'
+gem "font-awesome-rails"
+
+# This is the right gem to use summernote editor in Rails projects.
+gem 'summernote-rails'
+gem 'codemirror-rails'
+
+# To solve the problems on the turbolinks
+gem 'jquery-turbolinks'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
