@@ -22,7 +22,7 @@ ActiveAdmin.register Article do
       f.input :title
       f.input :body, :input_html => { class: "tinymce" }
       f.input :published
-      f.input :published_at
+      f.input :published_at, :as => :datetime_picker
       f.input :thumbnail
     end
     f.actions
