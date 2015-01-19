@@ -18,8 +18,6 @@
 //= require codemirror/modes/ruby
 //= require codemirror/modes/sass
 //= require codemirror/modes/shell
-//= require codemirror/modes/sql
-//= require codemirror/modes/slim
 //= require codemirror/modes/nginx
 //= require codemirror/modes/markdown
 //= require codemirror/modes/javascript
@@ -31,9 +29,11 @@
 //= require codemirror/modes/yaml
 //= require codemirror/modes/slim
 //= require codemirror/modes/php
-//= require summernote
 //= active_admin
 //= require articles
+//= require summernote
+//= require tinymce
 //= require lang/summernote-ko-KR
 //= require turbolinks
-////= require_tree .
+//= require_tree .
+

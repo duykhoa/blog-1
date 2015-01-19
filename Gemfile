@@ -47,7 +47,8 @@ gem "font-awesome-rails"
 # This is the right gem to use summernote editor in Rails projects.
 gem 'summernote-rails'
 gem 'codemirror-rails'
-
+gem 'tinymce-rails'
+gem 'geocoder'
 # To solve the problems on the turbolinks
 gem 'jquery-turbolinks'
 

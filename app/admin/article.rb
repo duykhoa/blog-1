@@ -8,6 +8,7 @@ ActiveAdmin.register Article do
     column :title
     column :body
     column :published
+    column :published_at
     actions
   end
 
@@ -15,11 +16,12 @@ ActiveAdmin.register Article do
   filter :published_at
   filter :category
 
-  simple_form_for @article do |f|
+  form do |f|
     f.inputs "Category Details" do
       f.input :title
-      f.input :body, :input_html => {:class => 'summernote'}
+      f.input :body, :input_html => { class: "tinymce" }
       f.input :published
+      f.input :published_at
       f.input :thumbnail
     end
     f.actions

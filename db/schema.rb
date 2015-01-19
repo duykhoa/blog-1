@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150115045851) do
+ActiveRecord::Schema.define(version: 20150118160709) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -61,6 +61,8 @@ ActiveRecord::Schema.define(version: 20150115045851) do
     t.integer  "thumbnail_file_size"
     t.datetime "thumbnail_updated_at"
     t.integer  "category_id"
+    t.float    "latitude"
+    t.float    "longitude"
   end
 
   create_table "categories", force: true do |t|
