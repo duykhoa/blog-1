@@ -5,6 +5,7 @@ FactoryGirl.define do
     published true
     published_at Time.current
     thumbnail File.new("#{Rails.root}/spec/support/fixtures/thumbnail.jpg")
+    tag_list Faker::Lorem.words(10).join(', ')
     association :category
   end
 end

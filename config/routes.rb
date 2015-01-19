@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   resources :articles do
     resources :comments
+    get 'tag/:tag_name' => 'articles#tag', on: :collection
   end
 
   resources :contact_mes, only: [:create]
