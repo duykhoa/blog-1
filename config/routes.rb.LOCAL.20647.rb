@@ -1,11 +1,10 @@
 Rails.application.routes.draw do
+
   devise_for :users
 
   resources :articles do
+    resources :comments
     get 'tag/:tag_name' => 'articles#tag', on: :collection
-    resources :comments, only: [:create] do
-      resource :replies, only: [:create]
-    end
   end
 
   resources :contact_mes, only: [:create]

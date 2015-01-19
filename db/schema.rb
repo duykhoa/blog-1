@@ -52,6 +52,14 @@ ActiveRecord::Schema.define(version: 20150116050052) do
     t.datetime "updated_at"
   end
 
+  create_table "replies", force: true do |t|
+    t.string   "content"
+    t.integer  "comment_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "name"
+  end
+
   create_table "taggings", force: true do |t|
     t.integer  "tag_id"
     t.integer  "taggable_id"
