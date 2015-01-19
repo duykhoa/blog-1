@@ -18,6 +18,7 @@ ActiveAdmin.register Article do
 
   form do |f|
     f.inputs "Category Details" do
+      f.input :category
       f.input :title
       f.input :body, :input_html => { class: "tinymce" }
       f.input :published

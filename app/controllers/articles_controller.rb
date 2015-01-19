@@ -29,7 +29,7 @@ class ArticlesController < ApplicationController
 
     was_published = @article.published
 
-    if @article.update(params[:article].permit(:title, :body, :published, :thumbnail))
+    if @article.update(params[:article].permit(:title, :body, :published, :thumbnail, :address, :latitude, :longitude))
       if not was_published and @article.published
         @article.published_at = Time.now
         @article.save
@@ -73,7 +73,7 @@ class ArticlesController < ApplicationController
 
   private
   def article_params
-  	params.require(:article).permit(:title, :body, :published, :thumbnail)
+  	params.require(:article).permit(:title, :body, :published, :thumbnail, :address, :latitude, :longitude)
   end
 end
 
