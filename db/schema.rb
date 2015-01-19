@@ -62,8 +62,6 @@ ActiveRecord::Schema.define(version: 20150118160709) do
     t.datetime "thumbnail_updated_at"
     t.integer  "category_id"
     t.string   "address"
-    t.float    "latitude"
-    t.float    "longitude"
   end
 
   create_table "categories", force: true do |t|

@@ -38,8 +38,8 @@ end
 
 if Rails.env.development?
   class ActionDispatch::Request
-      def ip
-        "192.168.1.139"
-      end
+    def ip
+      "192.168.1.139"
+    end
   end
 end
