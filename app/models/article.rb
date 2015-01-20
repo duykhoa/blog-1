@@ -1,4 +1,6 @@
 class Article < ActiveRecord::Base
+  MOST_COMMENTS_LIMIT = 3
+
 	belongs_to :category
 	has_many :comments, dependent: :destroy
 	validates :title, presence: true, length: { minimum:1 }
@@ -16,4 +18,11 @@ class Article < ActiveRecord::Base
   def is_published?
     published == true
   end
+
+  scope :most_comments, lambda {
+    joins(:comments)
+      .group("articles.id")
+      .select("articles.title", "count(comments.id) as comments_count")
+      .limit(MOST_COMMENTS_LIMIT)
+  }
 end

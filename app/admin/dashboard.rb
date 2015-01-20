@@ -8,7 +8,37 @@ ActiveAdmin.register_page "Dashboard" do
         span I18n.t("active_admin.dashboard_welcome.welcome")
         small I18n.t("active_admin.dashboard_welcome.call_to_action")
       end
-    end
+
+      column do
+        panel "Summary" do
+          div do
+            small "Total post"
+            small Article.count
+          end
+
+          div do
+            small "User count"
+            small User.count
+          end
+
+          div do
+            small "Category"
+            small Category.count
+          end
+        end
+      end
+
+      column do
+        panel "Article with most comments" do
+          Article.most_comments.each do |article|
+            div do
+              div article.title
+              strong "Comments: #{article.comments_count}"
+            end
+          end
+        end
+      end
+     end
 
     # Here is an example of a simple dashboard with columns and panels.
     #
