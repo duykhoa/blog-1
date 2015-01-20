@@ -1,6 +1,6 @@
 ActiveAdmin.register Article do
 
-  permit_params :title, :body, :published, :published_at, :thumbnail, :category_id, :address
+  permit_params :title, :body, :published, :published_at, :thumbnail, :category_id, :address, :tag_list
 
   index do
     selectable_column
@@ -12,6 +12,16 @@ ActiveAdmin.register Article do
     actions
   end
 
+  show do
+    attributes_table do
+      row :title
+      row :body
+      row :published
+      row :published_at
+      row :tag_list
+    end
+  end
+
   filter :title
   filter :published_at
   filter :category
@@ -21,6 +31,7 @@ ActiveAdmin.register Article do
       f.input :category_id, :as => :select, :collection => Category.all
       f.input :title
       f.input :body, :input_html => { class: "tinymce" }
+      f.input :tag_list
       f.input :published
       f.input :published_at, :as => :datetime_picker
       f.input :thumbnail
