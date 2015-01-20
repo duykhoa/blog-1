@@ -10,14 +10,19 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
  *= require_self
  *= require magnific-popup.css
+ *= require "comments"
+ *= require "contact_mes"
+ *= require "replies"
+ *= require "pages"
+ *= require "articles"
  */
 
 @import url(http://fonts.googleapis.com/css?family=Sanchez|League+Script|Raleway:300);
 // Bootstrap 3
 @import "bootstrap";
+
 @import "font-awesome";
 @import "summernote";
 @import "codemirror";
