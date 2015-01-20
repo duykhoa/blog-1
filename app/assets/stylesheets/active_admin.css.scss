@@ -15,3 +15,21 @@
 // For example, to change the default status-tag color:
 //
 //   .status_tag { background: #6090DB; }
+//
+
+#article_body_input {
+  width: 50%;
+  margin-left: 20%;
+}
+
+#article_title_input {
+  input {
+    width: 40%;
+  }
+}
+
+#active_admin_content #main_content {
+  label {
+    width: 20%;
+  }
+}

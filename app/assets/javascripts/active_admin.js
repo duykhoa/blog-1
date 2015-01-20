@@ -3,6 +3,7 @@
 
 $(document).ready(function() {
   tinyMCE.init({
-     mode: 'textareas'
+     mode: 'textareas',
+     selector: '.tinymce'
    });
 });
