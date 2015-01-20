@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
 
-	before_filter :authenticate_user!, :except => [:index, :show]
+	before_filter :authenticate_user!, :except => [:index, :show, :tag]
 
 	def new
 		@article = Article.new
@@ -29,7 +29,7 @@ class ArticlesController < ApplicationController
 
     was_published = @article.published
 
-    if @article.update(params[:article].permit(:title, :body, :published, :thumbnail))
+    if @article.update(params[:article].permit(:title, :body, :published, :thumbnail, :address, :latitude, :longitude))
       if not was_published and @article.published
         @article.published_at = Time.now
         @article.save
@@ -71,9 +71,24 @@ class ArticlesController < ApplicationController
   	redirect_to articles_path
   end
 
+  def tag
+    @articles = Article.tagged_with(tag_param).latest.paginate(page: page_param)
+
+    render 'tag'
+  end
+
   private
+
+  def page_param
+    params.permit(:page).fetch(:page) rescue 1
+  end
+
+  def tag_param
+    params.permit(:tag_name).fetch(:tag_name)
+  end
+
   def article_params
-  	params.require(:article).permit(:title, :body, :published, :thumbnail)
+    params.require(:article).permit(:title, :body, :published, :thumbnail, :tag_list, :address, :latitude, :longitude)
   end
 end
 

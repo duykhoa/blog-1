@@ -1,10 +1,16 @@
 Rails.application.routes.draw do
-
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
   devise_for :users
+
   resources :articles do
-    resources :comments
+    get 'tag/:tag_name' => 'articles#tag', on: :collection
+    resources :comments, only: [:create] do
+      resource :replies, only: [:create]
+    end
   end
 
+  resources :contact_mes, only: [:create]
   root 'articles#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
