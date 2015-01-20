@@ -43,7 +43,7 @@ ActiveAdmin.register Article do
         Geocoder.configure(timeout: 500)
         @location = Geocoder.search(request.remote_ip).first
       else
-        @location = request.location.try(:address)
+        @location = request.location
       end
     end
 
