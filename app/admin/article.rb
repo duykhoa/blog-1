@@ -19,6 +19,8 @@ ActiveAdmin.register Article do
       row :published
       row :published_at
       row :tag_list
+      row :category
+      row :address
     end
   end
 
