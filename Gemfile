@@ -28,7 +28,7 @@ gem 'spring',        group: :development
 
 # For admin
 gem 'devise'
-
+gem 'activeadmin', github: 'activeadmin'
 # For photos
 gem 'rmagick', '2.13.2'
 gem "paperclip", "~> 4.2"
@@ -38,8 +38,20 @@ gem 'aws-sdk-v1'
 gem 'will_paginate', '~> 3.0.6'
 
 gem 'rails_12factor', group: :production
+
 gem 'simple_form'
 gem 'acts-as-taggable-on', '~> 3.4'
+#summernote
+gem 'bootstrap-sass'
+gem "font-awesome-rails"
+
+# This is the right gem to use summernote editor in Rails projects.
+gem 'summernote-rails'
+gem 'codemirror-rails'
+gem 'tinymce-rails'
+gem 'geocoder'
+# To solve the problems on the turbolinks
+gem 'jquery-turbolinks'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

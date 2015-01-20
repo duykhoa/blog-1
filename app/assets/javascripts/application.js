@@ -12,6 +12,28 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
 //= require jquery.magnific-popup.min.js
+//= require bootstrap
+//= require codemirror
+//= require codemirror/modes/ruby
+//= require codemirror/modes/sass
+//= require codemirror/modes/shell
+//= require codemirror/modes/nginx
+//= require codemirror/modes/markdown
+//= require codemirror/modes/javascript
+//= require codemirror/modes/http
+//= require codemirror/modes/htmlmixed
+//= require codemirror/modes/haml
+//= require codemirror/modes/xml
+//= require codemirror/modes/css
+//= require codemirror/modes/yaml
+//= require codemirror/modes/slim
+//= require codemirror/modes/php
+//= active_admin
+//= require articles
+//= require summernote
+//= require tinymce
+//= require lang/summernote-ko-KR
+//= require turbolinks
 //= require_tree .
+
