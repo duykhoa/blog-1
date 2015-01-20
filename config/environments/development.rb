@@ -36,8 +36,10 @@ Rails.application.configure do
   # config.action_view.raise_on_missing_translations = true
 end
 
-class ActionDispatch::Request
-    def ip
-      "192.168.1.139"
-    end
+if Rails.env.development?
+  class ActionDispatch::Request
+      def ip
+        "192.168.1.139"
+      end
+  end
 end
