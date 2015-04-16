@@ -71,7 +71,7 @@ Follow this to install the source code to your machine
 
   Finally it'll start the server after finish these thing, very cool.
 
-  If you are an zsh user, you can create an alias in ``.zshrc``o
+  If you are an zsh user, you can create an alias in ``.zshrc``
   ``alias blog="cd ~/workspace/blog && ./init"``
 
 1. Admin mode
