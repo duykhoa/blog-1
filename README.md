@@ -18,7 +18,7 @@ Follow this to install the source code to your machine
 
   Basicly, the database.yml looks like:
 
-  ``
+  ```
   default: &default
     adapter: postgresql
     pool: 5
@@ -43,7 +43,7 @@ Follow this to install the source code to your machine
   production:
     <<: *default
     database: DATABASE_NAME
-  ``
+  ```
 
   It uses postgreSQL, so you need to install PostgreSQL before use.
 
@@ -52,12 +52,12 @@ Follow this to install the source code to your machine
 
   And the application.yml looks like this
 
-  ``
+  ```
   production:
     access_key_id: 456
     secret_access_key: 456
     bucket: "xxx"
-  ``
+  ```
 
   It is the config key for S3, you can go to amazon.com/s3, then view
   your account credential to get these information.
