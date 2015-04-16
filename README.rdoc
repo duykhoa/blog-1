@@ -1,4 +1,0 @@
-### README
-This is the readme tutorial
-
-Follow this to install the source code to your machine

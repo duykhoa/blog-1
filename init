@@ -1,1 +1,32 @@
 # /bin/bash
+
+# to make sure rvm are loaded, and you are using the right gemset and ruby-version
+cd ../blog
+
+pwd=$(pwd)
+
+bundle install
+
+echo "Create the database.yml and application.yml (0:No | 1:Yes): "
+read env_choice
+
+if [ $env_choice -eq 1 ]; then
+  cp $PWD/config/database.yml.sample $PWD/config/database.yml
+  cp $PWD/config/application.yml.sample $PWD/config/application.yml
+fi
+
+echo "========================================================="
+echo "Go to database.yml edit your database configuration"
+echo "Go to application.yml edit your s3 app secret and app key"
+echo "when you finish, press any key to continue"
+echo "see the README.md for more information"
+echo "========================================================="
+
+echo "Press any keys to continue...."
+
+read cont
+
+rake db:bootstrap
+
+echo "All right! start server now. Visit your app at http://localhost:3001"
+spring rails s
