@@ -5,6 +5,8 @@ cd ../blog
 
 pwd=$(pwd)
 
+# git pull origin && git status
+
 bundle install
 
 echo "Create the database.yml and application.yml (0:No | 1:Yes): "
@@ -26,7 +28,7 @@ echo "Press any keys to continue...."
 
 read cont
 
-rake db:bootstrap
+rake db:drop && rake db:bootstrap
 
 echo "All right! start server now. Visit your app at http://localhost:3001"
 spring rails s

@@ -12,9 +12,9 @@ Follow this to install the source code to your machine
     Basicly it's a init script, write by shell script
 
   - Run the script by calling ``./init``
-  It will run for a little while.
+  It takes a little bit of time to finish.
   You will be asked to edit the ``database.yml`` and ``application.yml``
-  file after this script generate it for you,
+  you press 0 for NO, 1 for YES and press enter.
 
   Basicly, the database.yml looks like:
 
@@ -65,9 +65,27 @@ Follow this to install the source code to your machine
   No need to setup it on the local machine (for development env), cause
   it won't access to S3 from development any more :)
 
-
   Then after finish config these 2 files, you can press any key and
   enter, the script will run bundle install, create database, migrate
   and seed database.
 
   Finally it'll start the server after finish these thing, very cool.
+
+  If you are an zsh user, you can create an alias in ``.zshrc``o
+  ``alias blog="cd ~/workspace/blog && ./init"``
+
+1. Admin mode
+
+Visit localhost:3000/admin
+Default admin account is
+
+**email/password: admin@admin.com/12341234**
+
+You can change the password and the email in the admin/users page
+
+In the admin/articles page, you can select multiple articles and do
+batches actions (delete selected articles), you can filter by multiple
+fields like title, published date, category
+
+
+
