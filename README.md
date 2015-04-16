@@ -76,16 +76,23 @@ Follow this to install the source code to your machine
 
 1. Admin mode
 
-Visit localhost:3000/admin
-Default admin account is
+  Visit localhost:3000/admin
+  Default admin account is
+  
+  **email/password: admin@admin.com/12341234**
+  
+  You can change the password and the email in the admin/users page
+  
+  In the admin/articles page, you can select multiple articles and do
+  batches actions (delete selected articles), you can filter by multiple
+  fields like title, published date, category.
+  
+  In the post page, I used tinymce editor plugin, it's very nice to edit your article there.
+  
+  Just simple like that :) Hope everything work
+  
+1. Feedback
+1. Contributor
 
-**email/password: admin@admin.com/12341234**
-
-You can change the password and the email in the admin/users page
-
-In the admin/articles page, you can select multiple articles and do
-batches actions (delete selected articles), you can filter by multiple
-fields like title, published date, category
-
-
-
+  
+  
