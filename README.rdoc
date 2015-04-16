@@ -1,4 +1,4 @@
-Blog
-(In progress)
+### README
+This is the readme tutorial
 
-Initially meant to document my trip to California in Dec, but I want to turn it into something more after.
+Follow this to install the source code to your machine
