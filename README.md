@@ -6,7 +6,7 @@ Follow this to install the source code to your machine
 1. Install the code to machine
 
   - grant execute mode to ``init``
-    Go inside the project (ex: ``cd ~/working/blog``)
+    Go inside the project (ex: ``cd ~/working/blog/script``)
     `` chmod +x init ``
 
     Basicly it's a init script, write by shell script
