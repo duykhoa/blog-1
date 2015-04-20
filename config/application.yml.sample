@@ -1,0 +1,4 @@
+production:
+  access_key_id: 456
+  secret_access_key: 456
+  bucket: "xxx"
