@@ -6,7 +6,7 @@ Follow this to install the source code to your machine
 1. Install the code to machine
 
   - grant execute mode to ``init``
-    Go inside the project (ex: ``cd ~/working/blog``)
+    Go inside the project (ex: ``cd ~/working/blog/script``)
     `` chmod +x init ``
 
     Basicly it's a init script, write by shell script
@@ -18,7 +18,7 @@ Follow this to install the source code to your machine
 
   Basicly, the database.yml looks like:
 
-  ``
+  ```
   default: &default
     adapter: postgresql
     pool: 5
@@ -43,7 +43,7 @@ Follow this to install the source code to your machine
   production:
     <<: *default
     database: DATABASE_NAME
-  ``
+  ```
 
   It uses postgreSQL, so you need to install PostgreSQL before use.
 
@@ -52,12 +52,12 @@ Follow this to install the source code to your machine
 
   And the application.yml looks like this
 
-  ``
+  ```
   production:
     access_key_id: 456
     secret_access_key: 456
     bucket: "xxx"
-  ``
+  ```
 
   It is the config key for S3, you can go to amazon.com/s3, then view
   your account credential to get these information.
@@ -71,21 +71,28 @@ Follow this to install the source code to your machine
 
   Finally it'll start the server after finish these thing, very cool.
 
-  If you are an zsh user, you can create an alias in ``.zshrc``o
+  If you are an zsh user, you can create an alias in ``.zshrc``
   ``alias blog="cd ~/workspace/blog && ./init"``
 
 1. Admin mode
 
-Visit localhost:3000/admin
-Default admin account is
+  Visit localhost:3000/admin
+  Default admin account is
+  
+  **email/password: admin@admin.com/12341234**
+  
+  You can change the password and the email in the admin/users page
+  
+  In the admin/articles page, you can select multiple articles and do
+  batches actions (delete selected articles), you can filter by multiple
+  fields like title, published date, category.
+  
+  In the post page, I used tinymce editor plugin, it's very nice to edit your article there.
+  
+  Just simple like that :) Hope everything work
+  
+1. Feedback
+1. Contributor
 
-**email/password: admin@admin.com/12341234**
-
-You can change the password and the email in the admin/users page
-
-In the admin/articles page, you can select multiple articles and do
-batches actions (delete selected articles), you can filter by multiple
-fields like title, published date, category
-
-
-
+  
+  
