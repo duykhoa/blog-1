@@ -6,7 +6,7 @@ module PaperclipStorageOption
 
     def production_options
         {
-          storage: s3,
+          storage: :s3,
           s3_credentials: Rails.root.join("config/application.yml")
         }
     end
