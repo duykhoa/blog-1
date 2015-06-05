@@ -37,8 +37,6 @@ gem 'aws-sdk-v1'
 # Page numbers
 gem 'will_paginate', '~> 3.0.6'
 
-gem 'rails_12factor', group: :production
-
 gem 'simple_form'
 gem 'acts-as-taggable-on', '~> 3.4'
 #summernote
